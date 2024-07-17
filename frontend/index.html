@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Schema Generator</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Model Schema Generator</h1>
+        <div>
+            <label for="modelName">Model Name:</label>
+            <input type="text" id="modelName" placeholder="Enter Model Name">
+        </div>
+        <div>
+            <label for="language">Select Language:</label>
+            <select id="language">
+                <option value="javascript">JavaScript</option>
+                <option value="typescript">TypeScript</option>
+            </select>
+        </div>
+        <div id="fields">
+            <div class="field">
+                <input type="text" class="field-name" placeholder="Field Name">
+                <select class="field-type">
+                    <option value="String">String</option>
+                    <option value="Number">Number</option>
+                    <option value="Date">Date</option>
+                    <option value="Boolean">Boolean</option>
+                    <option value="Object">Object</option>
+                    <option value="Array">Array</option>
+                </select>
+                <label><input type="checkbox" class="field-required"> Required</label>
+                <button class="remove-field" onclick="removeField(this)">Remove</button>
+            </div>
+        </div>
+        <button id="addField" onclick="addField()">Add Field</button>
+        <button id="generateSchema" onclick="generateSchema()">Generate Schema</button>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
